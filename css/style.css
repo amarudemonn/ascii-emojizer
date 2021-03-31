@@ -1,0 +1,111 @@
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+  color: #111;
+  font-size: 1.5rem;
+  line-height: 1.5;
+}
+
+.btn {
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  padding: 1rem 1.5rem;
+  transition: transform 0.2s;
+  cursor: pointer;
+}
+.btn:active, .btn:focus {
+  outline: none;
+  transform: scale(1.2);
+}
+.btn--cta {
+  margin: 1.5rem;
+  background-color: #f39c12;
+}
+.btn--clip {
+  background-color: #3498db;
+}
+
+.header {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+}
+.header__heading {
+  display: grid;
+  grid-template-rows: repeat(3, max-content);
+  grid-gap: 0.5rem;
+}
+@media only screen and (max-width: 21.25em) {
+  .header__heading {
+    font-size: 2.5rem;
+  }
+}
+.header .btn {
+  align-self: center;
+}
+
+.emojis {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
+  grid-gap: 1.5rem;
+  max-width: 110rem;
+  margin: 0 auto;
+  padding: 3rem;
+}
+@media only screen and (max-width: 21.25em) {
+  .emojis {
+    padding: 0;
+  }
+}
+
+.emoji {
+  text-align: center;
+  border: 1px solid #f1f1f1;
+  padding: 2rem;
+}
+.emoji__header {
+  margin: 2rem;
+}
+.emoji__body {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+.emoji__heading {
+  font-weight: 700;
+}
+.emoji__desc {
+  font-weight: 500;
+}
+
+.footer {
+  text-align: center;
+  padding: 4rem;
+}
+.footer__link:link, .footer__link:visited {
+  text-decoration: none;
+  color: currentColor;
+  font-size: 1.7rem;
+  display: inline-block;
+  transition: transform 0.3s;
+}
+.footer__link:hover, .footer__link:active {
+  transform: skewY(-5deg) scale(1.01);
+}
+
+/*# sourceMappingURL=style.css.map */
