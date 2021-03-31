@@ -1,4 +1,5 @@
 const emojis = {
+  "amel-face": ";-;",
   "innocent-face": "ʘ‿ʘ",
   "reddit-disapproval-face": "ಠ_ಠ",
   "table-flip": "(╯°□°）╯︵ ┻━┻",
