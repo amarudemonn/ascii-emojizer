@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function(e) {
 
 	Object.entries(emojis).forEach(emoji => {
 		emojisContainer.insertAdjacentHTML('beforeend', `
-			<div class="emoji">
+			<div class="emoji emoji--hidden">
 				<div class="emoji__header">
 					<h2 class="emoji__heading">${emoji[1]}</h2>
 				</div>
@@ -30,6 +30,27 @@ document.addEventListener('DOMContentLoaded', function(e) {
 			</div>
 		`) ;
 	});
+
+	// Fade In
+	const fadeInHandler = function(entries, observer) {
+		entries.forEach(entry => {
+			if (entry.isIntersecting) {
+				console.log(entry);
+				entry.target.classList.remove('emoji--hidden');
+				observer.unobserve(entry.target);
+			}
+		});
+	}
+
+	const fadeInObserver = new IntersectionObserver(fadeInHandler, {
+		root: null,
+		threshold: .5
+	});
+
+	const emojisCollection = emojisContainer.children;
+	for (let i = 0; i < emojisCollection.length; i++) {
+		fadeInObserver.observe(emojisCollection[i]);
+	}
 
 	const clipBtns = document.querySelectorAll('.btn--clip');
 
