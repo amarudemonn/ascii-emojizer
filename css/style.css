@@ -99,6 +99,28 @@ body {
   font-weight: 500;
 }
 
+.search-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-column: 1/-1;
+  margin-bottom: 2rem;
+}
+.search-container__search {
+  color: inherit;
+  font-family: inherit;
+  padding: 1rem 2rem;
+  border-radius: 3rem;
+  border: 1px solid #111;
+  transition: transform 0.25s;
+  text-align: center;
+}
+.search-container__search:focus {
+  outline: none;
+  transform: scale(1.2);
+}
+
 .footer {
   text-align: center;
   padding: 4rem;

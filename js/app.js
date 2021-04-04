@@ -38,7 +38,6 @@ class App {
 
 		this.#enableFadeInEffect();
 		this.#clipBtns = $$('.btn--clip');
-
 	}
 
 	#formatEmojiDesc(desc) {

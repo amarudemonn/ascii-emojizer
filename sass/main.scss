@@ -111,6 +111,30 @@ body {
 	}
 }
 
+.search-container {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	grid-column: 1 / -1;
+	margin-bottom: 2rem;
+
+	&__search {
+		color: inherit;
+		font-family: inherit;
+		padding: 1rem 2rem;
+		border-radius: 3rem;
+		border: 1px solid $text-color;
+		transition: transform .25s;
+		text-align: center;
+
+		&:focus {
+			outline: none;
+			transform: scale(1.2);
+		}
+	}
+}
+
 .footer {
 	text-align: center;
 	padding: 4rem;
