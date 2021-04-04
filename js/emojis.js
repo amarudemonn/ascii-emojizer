@@ -110,3 +110,5 @@ const emojis = {
   "peepers": "ಠಠ",
   "judgemental": "{ಠʖಠ}"
 }
+
+export default emojis;
