@@ -90,7 +90,7 @@ class App {
 	}
 
 	#search4(e) {
-		const search = e.target.value;
+		const search = e.target.value.toLowerCase();
 		const results = Object.entries(this.#emojis)
 											.filter(emoji => emoji[0].includes(search));
 		[...this.#emojisContainer.children].slice(2)
