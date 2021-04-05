@@ -2,3 +2,6 @@
 *.css.map
 *.sass.map
 *.scss.map
+dist
+.cache
+node_modules

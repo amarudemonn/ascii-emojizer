@@ -1,0 +1,25 @@
+{
+  "name": "ascii-emojizer",
+  "version": "1.0.0",
+  "description": "The good old way to express emotions",
+  "main": "index.html",
+  "scripts": {
+    "build": "parcel build index.html --public-url ./"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amarudemonn/ascii-emojizer.git"
+  },
+  "author": "Akari Amano",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/amarudemonn/ascii-emojizer/issues"
+  },
+  "homepage": "https://github.com/amarudemonn/ascii-emojizer#readme",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.5"
+  },
+  "dependencies": {
+    "core-js": "^2.6.12"
+  }
+}
