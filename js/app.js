@@ -6,6 +6,7 @@ class App {
 	#ctaButton = $('.btn--cta');
 	#emojis = emojis;
 	#clipBtns = null;
+	#search = $('.search-container__search');
 
 	constructor() {
 		this.#renderEmojis();
@@ -16,10 +17,11 @@ class App {
 		});
 
 		this.#emojisContainer.addEventListener('click', this.#handleCopyToClipboard.bind(this));
+
+		this.#search.addEventListener('input', this.#search4.bind(this));
 	}
 
-	#renderEmojis() {
-		const emojisArr = Object.entries(this.#emojis);
+	#renderEmojis(emojisArr = Object.entries(this.#emojis)) {
 		emojisArr.forEach(emoji => {
 			this.#emojisContainer.insertAdjacentHTML('beforeend', `
 				<div class="emoji emoji--hidden">
@@ -86,7 +88,15 @@ class App {
 			e.target.textContent = 'Copied!';
 		}
 	}
+
+	#search4(e) {
+		const search = e.target.value;
+		const results = Object.entries(this.#emojis)
+											.filter(emoji => emoji[0].includes(search));
+		[...this.#emojisContainer.children].slice(2)
+			.forEach(sib => sib.remove());
+		this.#renderEmojis(results);
+	}
 }
 
 export default App;
-
